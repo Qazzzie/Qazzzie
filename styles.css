@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --gray1: #333333;
+  --gray2: #555555;
+  --gray3: #cccccc;
+  --gray4: #aaaaaa;
+  --black: #080808;
+  --teal: #006060;
+  --lightteal: #008080;
+  --purple: #800080;
+  --navy: #000080;
+  --cyan: #17a2b8;
+  --violetred: #c71585;
+  --red: #ff0000;
+  --orange: #ffa500;
+  --green: #006400;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.8em;
+  color: var(--white);
+}
+
+form {
+  width: 400px;
+}
+
+.flex-item,
+.grid-item {
+  padding: 10px;
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 2.4em;
+  text-align: center;
+}
+
+.flex-item {
+  width: 160px;
+  height: 80px;
+  margin: 1px;
+}
+
+body {
+  margin: 100px;
+  background-color: var(--teal);
+}
+
+.nav-list {
+  position: fixed;
+  /* width: 100%; */
+  top:0;
+  left:50%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: orangered;
+}
+
+.list-item {
+  float: right;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color:  #ffbf00;
+  color: black;
+}
+
+
+/* .nav-link {
+} */
+
+#header{
+  font-size: 2.5rem;
+
+}
+
+#paragraph{
+  text-indent: 50px;
+  letter-spacing: 10px;
+}
+#paragraph:hover{
+  color:black;
+}
+
+#note{
+  width: 50%;
+  height: 50px;
+}
