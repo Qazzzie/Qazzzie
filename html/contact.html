@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zach Santangelo</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     <script defer src="../js/index.js"></script>
   </head>
   <body>
@@ -14,10 +14,29 @@
     </div>
     <nav >
       <ul class="nav-list">
-        <li class="list-item"><a href="#" id="nav-about">About</a></li>
-        <li class="list-item"><a href="/html/projects.html" id="nav-projects">Projects</a></li>
-        <li class="list-item"><a href="contact.html" id="nav-contact">Contact</a></li>
-      </ul>
+        <li class="list-item"><a href="../index.html" id="nav-about">About</a></li>
+        <li class="list-item"><a href="projects.html" id="nav-projects">Projects</a></li>
+        <li class="list-item"><a href="#" id="nav-contact">Contact</a></li>
+      </ul>      
+    <div id="contact">
+      <div class="form-element">
+        <label for="name">Your name:</label>
+        <input type="text" name="username" id="username" placeholder="Username" />
+      </div>
+      
+      <div class="form-element">
+        <label for="Email">Email:</label>
+        <input type="text" name="Email" id="Email" placeholder="Email" />  
+      </div>
+
+      <div class="form-element">
+        <label for="note">Note:</label>
+        <input type="text" name="note" id="note" placeholder="Note" />  
+      </div>
+
+      <input type="submit" class="btn-primary" value="Send">
+    </form>
+    </div>
     </nav>
   </body>
 </html>
