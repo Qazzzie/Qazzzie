@@ -54,16 +54,21 @@ body {
   position: fixed;
   /* width: 100%; */
   top:0;
-  left:50%;
+  right: 0.1vw;
+  
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: orangered;
+  /* background-color: orangered; */
+  border-radius: 5px;
 }
 
 .list-item {
   float: right;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: orangered;
 }
 
 li a{
@@ -82,10 +87,16 @@ li a:hover{
 
 /* .nav-link {
 } */
+.highlight{
+  text-shadow: 1px 1px 1px purple;
+}
+.highlight:hover{
+  color:orangered
+}
 
 #header{
   font-size: 2.5rem;
-
+  display: block;
 }
 
 #paragraph{
@@ -99,4 +110,18 @@ li a:hover{
 #note{
   width: 50%;
   height: 50px;
+}
+
+#about{
+  background-color: teal;
+  padding: 50px;
+  margin-bottom: 50px;
+  border-radius: 50px;
+}
+
+#experience{
+  background-color: teal;
+  padding: 50px;
+  margin-bottom: 50px;
+  border-radius: 50px;
 }

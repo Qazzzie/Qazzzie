@@ -3,4 +3,5 @@ would allow me to push with my saved password and I had to figure out
 how to authenticate my pushes with a personal access token... Which was not entirely
 clear how to achieve on linux mint. So then I had to set up SSH and pray it worked on vscode 
 after I followed all the steps. I started the general layout of the files and html elements of the page so I 
-could add some authentic content to move around and begin customizing. 
+could add some authentic content to move around and begin customizing. I 
+made the text in my about section highlight for each letter using javascript.
