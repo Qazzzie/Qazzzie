@@ -185,12 +185,9 @@ li a:hover{
 .image{
   width: 60vw;
   height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 30px;
   border-color: #006400;
-  border: 50px;
+  border: 10px;
 }
 @media (min-width: 414px) and (max-width: 767px) { 
   .image{
