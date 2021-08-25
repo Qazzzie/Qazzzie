@@ -5,4 +5,8 @@ clear how to achieve on linux mint. So then I had to set up SSH and pray it work
 after I followed all the steps. I started the general layout of the files and html elements of the page so I 
 could add some authentic content to move around and begin customizing. I 
 made the text in my about section highlight for each letter using javascript.
-I had to use jekyll to enable multiple pages to be navigatable urls in github pages.
+I am attempting to use jekyll to enable multiple pages to be navigatable urls in github pages.
+I get 404 when I attempt to go to any page other than index.html.
+I made the pain paragraph in my about section highlight for each letter upon hover. I thought it
+was nifty. I learned how to efficiently use classes and id's as I'm creating my patterns in the page so that there are less 
+colliding css properties. 
