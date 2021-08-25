@@ -5,3 +5,4 @@ clear how to achieve on linux mint. So then I had to set up SSH and pray it work
 after I followed all the steps. I started the general layout of the files and html elements of the page so I 
 could add some authentic content to move around and begin customizing. I 
 made the text in my about section highlight for each letter using javascript.
+I had to use jekyll to enable multiple pages to be navigatable urls in github pages.

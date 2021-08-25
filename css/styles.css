@@ -29,15 +29,13 @@ body {
   body{
     font-size: 1em;
   }
-
   .image{
     width: 20vw;
   }
 }
-form {
+.form {
   width: 400px;
 }
-
 .flex-item,
 .grid-item {
   padding: 10px;
@@ -57,31 +55,48 @@ form {
   color: var(--orange);
 }
 #link:visited{
-  color: black;
+  color: Orange;
 }
 
 #side{
-  display: inline-flex;
-  flex: 1;
   margin-right: auto;
 }
-
-body {
-  margin: 100px;
-  background-color: var(--teal);
+.btn{
+  background-color: orangered;
+  color: white;
+  width: 100%;
+  height: 50px;
+  border: 3px;
+  border-radius: 30px;
+  border-color: purple;
 }
-
+.btn:hover{
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+body {
+  background-color: var(--teal);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.center{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
 .nav-list {
-  position: fixed;
+  /* position: fixed; */
   top:0;  
   display:block;
   list-style-type: none;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   padding: 0;
   overflow: hidden;
   /* background-color: orangered; */
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .list-item {
@@ -126,18 +141,27 @@ li a:hover{
 #paragraph:hover{
   color:black;
 }
-
+#username{
+  width: 100%;
+}
+#email{
+  width: 100%;
+}
 #note{
-  width: 50%;
+  width: 100%;
   height: 50px;
 }
 
 .content{
-  display: grid;
+  /* display: grid; */
   background-color: teal;
   padding: 50px;
   margin-bottom: 50px;
   border-radius: 50px;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  text-align: center;
 }
 
 #experience{
@@ -146,35 +170,54 @@ li a:hover{
   margin-bottom: 50px;
   border-radius: 50px;
 }
-#project{
+.project{
   width: 90%;
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px;
-  border: 1px solid #666;
+  grid-template-rows: auto;
+  border: 3px solid #666;
   padding: 50px;
+  border-radius: 10px;
 }
 
 .image{
-  width: 60rem;
-  height: 60vh;
+  width: 60vw;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 30px;
+  border-color: #006400;
+  border: 50px;
 }
 @media (min-width: 414px) and (max-width: 767px) { 
   .image{
-    width: 50vw;
-    height: 50vh;
+    width: 45vw;
+    height: 45vh;
   }
 }
 #plathymeImage{
   background: url("/images/PlaThyme.png");
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 #plathymeImage:hover{
   background: url("/images/slapjack.png");
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .form-element{
   margin-bottom: 50px;
+}
+#mlImage{
+  background: url("/images/mlcode.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#plantImage{
+  background: url("/images/showcase-65306_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
 }

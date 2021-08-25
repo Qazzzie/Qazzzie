@@ -9,16 +9,16 @@
     <script defer src="../js/index.js"></script>
   </head>
   <body>
-    <div id="contact">
-      <p1 id="header">Contact</p1>
-    </div>
-    <nav >
+    <nav>
       <ul class="nav-list">
         <li class="list-item"><a href="../index.html" id="nav-about">About</a></li>
         <li class="list-item"><a href="projects.html" id="nav-projects">Projects</a></li>
         <li class="list-item"><a href="#" id="nav-contact">Contact</a></li>
       </ul>      
-    <div class="content">
+    </nav>
+    <div id="contact">
+      <p1 id="header">Contact Zach</p1>
+      <div class="content">
       <div class="form-element">
         <label for="name">Your name:</label>
         <input type="text" name="username" id="username" placeholder="Username" />
@@ -26,7 +26,7 @@
       
       <div class="form-element">
         <label for="Email">Email:</label>
-        <input type="text" name="Email" id="Email" placeholder="Email" />  
+        <input type="email" name="Email" id="email" placeholder="Email" />  
       </div>
 
       <div class="form-element">
@@ -34,9 +34,10 @@
         <input type="text" name="note" id="note" placeholder="Note" />  
       </div>
 
-      <input type="submit" class="btn-primary" value="Send">
+      <input type="submit" class="btn" value="Send">
     </form>
     </div>
-    </nav>
+  </div>
+  
   </body>
 </html>
