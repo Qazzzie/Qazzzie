@@ -1,3 +1,5 @@
 theme: jekyll-theme-hacker
-baseurl: /Qazzzie
+domain: qazzzie.github.io/Qazzzie/
+baseurl: /Qazzzie/
 source: /Qazzzie
+url: https://qazzzie.github.io/Qazzzie/

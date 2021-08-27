@@ -1,3 +1,5 @@
+https://github.com/Qazzzie/Qazzzie
+https://qazzzie.github.io/Qazzzie/#
 The first problem I encountered was that git no longer 
 would allow me to push with my saved password and I had to figure out
 how to authenticate my pushes with a personal access token... Which was not entirely
