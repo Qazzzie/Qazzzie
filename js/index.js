@@ -14,5 +14,4 @@ const printAbout = () => {
     addLetterToDom(bio.charAt(i));
   } 
 };
-
-printAbout();
+// printAbout();
