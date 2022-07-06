@@ -28,3 +28,11 @@ $(window).load(function() {
     // Animate loader off screen
     $(".se-pre-con").fadeOut("slow");;
 });
+
+window.onload = function(e)
+{
+    //document.readyState will be complete, it's one of the requirements for the window.onload event to be fired
+    //do stuff for when everything is loaded
+    // body.removeChild(img)
+    $(".se-pre-con").remove();
+};

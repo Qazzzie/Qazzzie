@@ -1,39 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Zach Santangelo</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
-    <script defer src="../js/index.js"></script>
+  <!-- Metadata, favicon -->
+  <title>Zach Santangelo SDE</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Zach's personal portfolio website">
+  <meta name="keywords" content="portfolio SE SDE software development developer engineer">
+  <meta name="author" content="Zach Santangelo">
+  
+  <!-- css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css" >
+  <link rel="stylesheet" href="css/responsive.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- <link rel="stylesheet" href="css/camera.css"> -->
+
+  <!-- Font Awesome kit https://fontawesome.com/kits/1d1249de16/use?welcome=yes for icons+animations -->
+  <script src="https://kit.fontawesome.com/1d1249de16.js" crossorigin="anonymous"></script>
+
+  <!-- Js Scripts -->
+  <script async src="../js/loadinganimation.js"></script>
+  <script defer src="../js/index.js"></script>
+  
+  <!-- jquery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  
+  <!-- boids -->
+  <script src="../js/boids/spawnBoids.js"></script>
+  <script src="../js/boids/boids.js"></script>
   </head>
   <body>
-    <nav>
-      <ul class="nav-list">
-        <li class="list-item"><a href="../index.html" id="nav-about">About</a></li>
-        <li class="list-item"><a href="/html/projects.html" id="nav-projects">Projects</a></li>
-        <li class="list-item"><a href="#" id="nav-contact">Contact</a></li>
-      </ul>      
+    <!-- loading animation -->
+    <div class="se-pre-con"></div>
+    <!-- nav -->
+    <header>
+    <nav class="navigation">
+      <ul class="social-nav">
+        <li>
+          <a href="https://twitter.com/SantangeloZach" target="_blank"><i class="fa-brands fa-twitter fa-flip" style="--fa-animation-duration: 5s;"></i></a>
+        </li>  
+        <li>
+          <a href="https://www.linkedin.com/in/zachariah-santangelo/" target="_blank"><i class="fa-brands fa-linkedin fa-bounce" style="--fa-animation-duration: 2.5s;"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/Qazzzie" target="_blank"><i class="fa-brands fa-github fa-spin" style="--fa-animation-duration: 4.5s;"></i></a>
+        </li>
+      </ul>
+
+      <ul class="site-nav">
+        <li class="site-list-item">
+          <a class="sitelink" href="../index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="site-list-item">
+          <a class="sitelink" href="contact.html" id="nav-contact">Contact</a>
+        </li>
+      </ul>
     </nav>
+    </header>
+
     <div id="contact">
       <p1 id="header">Contact Zach</p1>
       <div class="content">
       <div class="form-element">
         <label for="name">Your name:</label>
-        <input type="text" name="username" id="username" placeholder="Username" />
+        <input type="text" name="username" id="username" placeholder="Zach" />
       </div>
       <div class="form-element">
         <label for="Email">Email:</label>
-        <input type="email" name="Email" id="email" placeholder="Email" />  
+        <input type="email" name="Email" id="email" placeholder="zach@zach.com" />  
       </div>
       <div class="form-element">
         <label for="note">Note:</label>
-        <input type="text" name="note" id="note" placeholder="Note" />  
+        <input type="text" name="note" id="note" placeholder="We've been trying to reach you about your car's extended warranty" />  
       </div>
       <input type="submit" class="btn" value="Send">
     </form>
     </div>
+  </div>
+  <!-- boids -->
+  <div class="boids-canvas" id="boids" style="z-index:-1;">
+    <canvas class="boids"></canvas>
   </div>
   </body>
 </html>

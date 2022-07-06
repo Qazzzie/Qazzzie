@@ -44,11 +44,14 @@
   height: 80px;
   margin: 1px;
 }
-#link{
-  color: var(--orange);
+.link{
+  color: orange;
 }
-#link:visited{
-  color: Orange;
+.link:visited{
+  color: red;
+}
+.link:hover{
+  color: #4880c9;
 }
 #side{
   margin-right: auto;
@@ -67,6 +70,7 @@
   cursor: pointer;
 }
 body {
+  height: auto;
   background-color: #B74803;
   display: grid;
   justify-content: center;
@@ -107,6 +111,7 @@ body {
 }
 /* social nav items */
 .social-nav {
+  padding-left: 10px;
   top:0;  
   position: absolute;
   list-style-type: none!important;
@@ -116,6 +121,7 @@ body {
 ul.social-nav li{
   float:left;
   color: white;
+  
 }
 /* site nav items */
 .site-nav {
@@ -131,6 +137,11 @@ ul.social-nav li{
   margin-left: 5px;
   background-color: #B74803;
 }
+.site-list-item:hover{
+    transform: scale(1.1);
+    background-color: #31525B;
+    border-radius: 100px;
+}
 li a{
   display: block;
   color: white;
@@ -140,13 +151,13 @@ li a{
 }
 li a:hover{
   background-color: #31525B;
-  border-radius: 10px;
+  border-radius: 20px;
   color: black;
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
 }
-.sitelink:hover{
+/* .sitelink:hover{
     transform: scale(1.1);
-}
+} */
 
 /* text highlight/shadows */
 .highlight{
@@ -155,9 +166,10 @@ li a:hover{
 .highlight:hover{
   color:orangered
 }
-#header{
+.header{
   font-size: 2.5rem;
   display: block;
+  height: auto;
 }
 #paragraph{
   text-indent: 50px;
@@ -254,22 +266,68 @@ li a:hover{
 }
 
 /* projects */
-.projects{
+.projects-grid{
+  width: 100%;
   display: grid;
+  /* grid-template: 20em 20em 20em / 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 25%) ;
+  grid-template-rows: auto;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-
   background-color: #31525B;
-  padding: 50px;
+  padding: 10px;
   margin-bottom: 50px;
   border-radius: 50px;
   text-align: center;
-
   border: 3px solid #4880c9;
 }
+.project-item{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* padding: 6vh 3vw; */
+  display: flex;
+  margin: 1vh 3vw;
+  /* size: 100px 200px; */
+  height: 40vh;
+  -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #b3b3b5;
+  padding: 5vh 2vw;
+}
+@media (min-width: 414px) and (max-width: 767px) { 
+  .projects-grid{
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 767px) and (max-width: 1500px) { 
+  .projects-grid{
+    grid-template-columns: repeat(2, 50%);
+    /* grid-template-rows: 1vh 1vw; */
+  }
+}
+.project-grid-image{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.project-grid-image-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: orangered;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+.project-grid-image:hover .project-grid-image-overlay{
+  width: 100;
+}
 
+/* 
 #plathymeImage{
   background: url("/images/PlaThyme.png");
   background-repeat: no-repeat;
@@ -279,4 +337,4 @@ li a:hover{
   background: url("/images/slapjack.png");
   background-repeat: no-repeat;
   background-size: auto;
-}
+} */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="head">    
+    <!-- Metadata, favicon -->
+    <title>Zach Santangelo SDE</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href=".../../images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../images/favicon/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Zach's personal portfolio website">
+    <meta name="keywords" content="portfolio SE SDE software development developer engineer">
+    <meta name="author" content="Zach Santangelo">
+    
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" >
+    <link rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- <link rel="stylesheet" href="css/camera.css"> -->
+
+    <!-- Font Awesome kit https://fontawesome.com/kits/1d1249de16/use?welcome=yes for icons+animations -->
+    <script src="https://kit.fontawesome.com/1d1249de16.js" crossorigin="anonymous"></script>
+
+    <!-- Js Scripts -->
+    <script async src="../../js/loadinganimation.js"></script>
+    <script defer src="../../js/index.js"></script>
+    
+    <!-- jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    
+    <!-- boids -->
+    <script src="../../js/boids/spawnBoids.js"></script>
+    <script src="../../js/boids/boids.js"></script>
+  </head>
+
+  <body class="body">
+    <!-- loading animation -->
+    <div class="se-pre-con"></div>
+    <!-- nav -->
+    <header>
+    <nav class="navigation">
+      <ul class="social-nav">
+        <li>
+          <a href="https://twitter.com/SantangeloZach" target="_blank"><i class="fa-brands fa-twitter fa-flip" style="--fa-animation-duration: 5s;"></i></a>
+        </li>  
+        <li>
+          <a href="https://www.linkedin.com/in/zachariah-santangelo/" target="_blank"><i class="fa-brands fa-linkedin fa-bounce" style="--fa-animation-duration: 2.5s;"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/Qazzzie" target="_blank"><i class="fa-brands fa-github fa-spin" style="--fa-animation-duration: 4.5s;"></i></a>
+        </li>
+      </ul>
+
+      <ul class="site-nav">
+        <li class="site-list-item">
+          <a class="sitelink" href="../../index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="site-list-item">
+          <a class="sitelink" href="../contact.html" id="nav-contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    </header>
+
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/WIA1zbq7JFM">
+    </iframe>
+    </div>
+      <!-- boids -->
+      <div class="boids-canvas" id="boids" style="z-index:-1;">
+        <canvas class="boids"></canvas>
+      </div>
+
+    </body>
+</html>
