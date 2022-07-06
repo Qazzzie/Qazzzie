@@ -92,7 +92,8 @@ body {
   overflow: hidden;
 } */
 .navigation{
-  display:flex;
+  top: 0;
+  position:sticky;
   width: 100vw;
   border-top: 1px solid #fdc34e;
   padding-bottom: 18px;
@@ -107,23 +108,21 @@ body {
 /* social nav items */
 .social-nav {
   top:0;  
-  display:block;
+  position: absolute;
   list-style-type: none!important;
   padding: 0;
   overflow: hidden;
 }
 ul.social-nav li{
-  float:right;
+  float:left;
   color: white;
 }
 /* site nav items */
 .site-nav {
   top:0;  
-  display:block;
   list-style-type: none;
   padding: 0;
   overflow: hidden;
-  float: right;
 }
 .site-list-item {
   float: right;
@@ -143,7 +142,7 @@ li a:hover{
   background-color: #31525B;
   border-radius: 10px;
   color: black;
-  /* transform: scale(1.2); */
+  transform: scale(1.2);
 }
 .sitelink:hover{
     transform: scale(1.1);
@@ -183,24 +182,9 @@ li a:hover{
   margin-bottom: 50px;
   border-radius: 50px;
   text-align: center;
+  border: 3px solid #4880c9;
 }
-#experience{
-  background-color: teal;
-  padding: 50px;
-  margin-bottom: 50px;
-  border-radius: 50px;
-}
-.project{
-  width: 90%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  border: 3px solid #666;
-  padding: 50px;
-  border-radius: 10px;
-}
+
 .image{
   width: 60vw;
   height: 50vh;
@@ -214,16 +198,7 @@ li a:hover{
     height: 45vh;
   }
 }
-#plathymeImage{
-  background: url("/images/PlaThyme.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-#plathymeImage:hover{
-  background: url("/images/slapjack.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-}
+
 .form-element{
   margin-bottom: 50px;
 }
@@ -269,4 +244,39 @@ li a:hover{
   border-radius: 50px;
   position: inherit, absolute;
   float: left;
+}
+
+/* boids */
+.boids-canvas{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* projects */
+.projects{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  background-color: #31525B;
+  padding: 50px;
+  margin-bottom: 50px;
+  border-radius: 50px;
+  text-align: center;
+
+  border: 3px solid #4880c9;
+}
+
+#plathymeImage{
+  background: url("/images/PlaThyme.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#plathymeImage:hover{
+  background: url("/images/slapjack.png");
+  background-repeat: no-repeat;
+  background-size: auto;
 }

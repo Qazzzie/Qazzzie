@@ -134,8 +134,8 @@ var random = function(maxNum) {
 // Insert all the boid stuff onto the page and 
 // set it all up
 window.onload = function () {
-	width = 600;
-	height = 400;
+	width = 600;//window.innerWidth || document.body.clientWidth;
+	height = 400;//window.innerHeight || document.body.clientHeight;
 	var stop = false;
 	
 	maxVelocity = 5;
@@ -146,7 +146,7 @@ window.onload = function () {
 		return;
 	}
 
-	elem.innerHTML = "<div id='boids-canvas' style='margin: auto; background: white; width:" + width + "px; height:" + height + "px;'></div><p><button id='boids-stop'>Stop</button></p>";
+	elem.innerHTML = "<div id='boids-canvas' style='margin: auto;  width:" + width + "px; height:" + height + "px;'></div>";
 
     paper = Raphael("boids-canvas", width, height);
 

@@ -33,12 +33,12 @@
     <!-- boids -->
     <script src="js/boids/spawnBoids.js"></script>
     <script src="js/boids/boids.js"></script>
-
   </head>
 
-  
   <body class="body">
+    <!-- loading animation -->
     <div class="se-pre-con"></div>
+    <!-- nav -->
     <header>
     <nav class="navigation">
       <ul class="social-nav">
@@ -58,9 +58,6 @@
           <a class="sitelink" href="index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
         </li>
         <li class="site-list-item">
-          <a class="sitelink" href="page/projects.html" id="nav-projects">Projects</a>
-        </li>
-        <li class="site-list-item">
           <a class="sitelink" href="page/contact.html" id="nav-contact">Contact</a>
         </li>
       </ul>
@@ -68,12 +65,46 @@
     </header>
 
     <div id="about" class="content">
-        <p1 id="header">Zach Santangelo</p1>
-        <img src="images/zachface.jpg" class="profile-pic fa-beat" style="--fa-animation-duration: 10s; --fa-beat-scale: 1.1;" alt="zach-profile-pic">
-        <p>Hello! I'm a passionate learner and find great joy in the process of software development. I enjoy thinking about creative approaches to problems in my spare time, and I feel inspired by complex challenges. I love implementing solutions with expressive code to produce an extensible product.</p>
+      <p1 id="header" style="color:#cc6d3d">Zach Santangelo</p1>
+      <img src="images/zachface.jpg" class="profile-pic fa-beat" style="--fa-animation-duration: 10s; --fa-beat-scale: 1.1;" alt="zach-profile-pic">
+      <p>Hello! I'm a passionate learner and find great joy in the process of software development. I enjoy thinking about creative approaches to problems in my spare time, and I feel inspired by complex challenges. I love implementing solutions with expressive code I am proud of to produce an extensible product. The endless possibilities motivate me to explore CS every day.</p>
+    </div>
+
+    <div class="projects">
+      <div class="projects-grid">
+        <div>
+          JamShare
+        </div>
+
+        <div>
+          Deobfuscator
+        </div>
+
+        <div>
+          PlaThyme
+        </div>
+
+        <div>
+          Panorama Image Stitcher
+        </div>
+
+        <div>
+          Frame Interpolator
+        </div>
+
+
+        <div>
+          Image color transferer
+        </div>
+
       </div>
-      <div class="boids-canvas">
+    </div>
+
+    </div>
+      <!-- boids -->
+      <div class="boids-canvas" id="boids" style="z-index:-1;">
         <canvas class="boids"></canvas>
       </div>
+
     </body>
 </html>
