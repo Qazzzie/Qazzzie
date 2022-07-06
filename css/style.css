@@ -18,11 +18,7 @@
   --orange: #ffa500;
   --green: #006400;
 }
-body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1.8em;
-  color: var(--white);
-}
+
 @media (min-width: 414px) and (max-width: 767px) {
   body{
     font-size: 1em;
@@ -31,6 +27,7 @@ body {
     width: 20vw;
   }
 }
+
 .form {
   width: 400px;
 }
@@ -70,10 +67,13 @@ body {
   cursor: pointer;
 }
 body {
-  background-color: var(--gray2);
+  background-color: #B74803;
   display: grid;
   justify-content: center;
   align-items: center;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.8em;
+  color: #B3DEE5;
 }
 .center{
   display: grid;
@@ -81,18 +81,56 @@ body {
   align-items: center;
   grid-template-columns: 1fr;
 }
-.nav-list {
+
+/* navigation */
+
+/* .nav-list {
   top:0;  
   display:block;
   list-style-type: none;
   padding: 0;
   overflow: hidden;
+} */
+.navigation{
+  display:flex;
+  width: 100vw;
+  border-top: 1px solid #fdc34e;
+  padding-bottom: 18px;
+  background-color: #FFA101;
+  background-image: -moz-linear-gradient(top, #ff9b00, #fa7908);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff9b00), to(#fa7908));
+	background-image: -webkit-linear-gradient(top, #ff9b00, #fa7908);
+	background-image: -o-linear-gradient(top, #ff9b00, #fa7908);
+	background-image: linear-gradient(top, #ff9b00, #fa7908);
+	background-repeat: repeat-x;
 }
-.list-item {
+/* social nav items */
+.social-nav {
+  top:0;  
+  display:block;
+  list-style-type: none!important;
+  padding: 0;
+  overflow: hidden;
+}
+ul.social-nav li{
+  float:right;
+  color: white;
+}
+/* site nav items */
+.site-nav {
+  top:0;  
+  display:block;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+.site-list-item {
   float: right;
   border-radius: 5px;
   margin-right: 5px;
-  background-color: orangered;
+  margin-left: 5px;
+  background-color: #B74803;
 }
 li a{
   display: block;
@@ -102,9 +140,16 @@ li a{
   text-decoration: none;
 }
 li a:hover{
-  background-color:  black;
+  background-color: #31525B;
   border-radius: 10px;
+  color: black;
+  /* transform: scale(1.2); */
 }
+.sitelink:hover{
+    transform: scale(1.1);
+}
+
+/* text highlight/shadows */
 .highlight{
   text-shadow: 1px 1px 1px purple;
 }
@@ -133,7 +178,7 @@ li a:hover{
   height: 50px;
 }
 .content{
-  background-color: teal;
+  background-color: #31525B;
   padding: 50px;
   margin-bottom: 50px;
   border-radius: 50px;
@@ -192,23 +237,36 @@ li a:hover{
   background-repeat: no-repeat;
   background-size: auto;
 }
-.navigation{
-  width: 100vw;
-  border-top: 1px solid #fdc34e;
-  padding-bottom: 18px;
-  background-color: #fd8d03;
-  background-image: -moz-linear-gradient(top, #ff9b00, #fa7908);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff9b00), to(#fa7908));
-	background-image: -webkit-linear-gradient(top, #ff9b00, #fa7908);
-	background-image: -o-linear-gradient(top, #ff9b00, #fa7908);
-	background-image: linear-gradient(to bottom, #ff9b00, #fa7908);
-	background-repeat: repeat-x;
+
+
+
+/* loading animation. only works with JS, make sure to add jquery CDN script to html page.
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script> */
+.no-js #loader { display: none; }
+.js #loader { 
+  display: block; 
+  position: absolute; 
+  left: 100px;
+  top: 0;
 }
-ul.social{
-  display:block;
-  list-style-type: none!important;
-  margin:0;
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../images/Preload.gif') center no-repeat #ff9b00;
 }
-ul.social li{
-  float:left;
+
+/* hamburger menu */
+
+
+
+/* profile picture */
+.profile-pic{
+  border-radius: 50px;
+  position: inherit, absolute;
+  float: left;
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>    
+  <head class="head">    
     <!-- Metadata, favicon -->
-    <title>About Zach Santangelo (SDE)</title>
+    <title>Zach Santangelo SDE</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
     <meta name="description" content="Your description">
     <meta name="keywords" content="Your keywords">
     <meta name="author" content="Your name">
@@ -23,38 +23,50 @@
     <script src="https://kit.fontawesome.com/1d1249de16.js" crossorigin="anonymous"></script>
 
     <!-- Js Scripts -->
+    <script async src="js/loadinganimation.js"></script>
     <script defer src="js/index.js"></script>
-
+    
+    <!-- jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    
   </head>
 
-  <body>
+  
+  <body class="body">
+    <div class="se-pre-con"></div>
     <header>
     <nav class="navigation">
-      <ul class="social">
+      <ul class="social-nav">
         <li>
-          <a href="https://github.com/Qazzzie" target="_blank"><i class="fa-brands fa-github fa-spin" style="--fa-animation-duration: 2.5s;"></i></a>
-        </li>
+          <a href="https://twitter.com/SantangeloZach" target="_blank"><i class="fa-brands fa-twitter fa-flip" style="--fa-animation-duration: 5s;"></i></a>
+        </li>  
         <li>
           <a href="https://www.linkedin.com/in/zachariah-santangelo/" target="_blank"><i class="fa-brands fa-linkedin fa-bounce" style="--fa-animation-duration: 2.5s;"></i></a>
         </li>
         <li>
-          <a href="https://twitter.com/SantangeloZach" target="_blank"><i class="fa-brands fa-twitter fa-flip" style="--fa-animation-duration: 5s;"></i></a>
-        </li>  
+          <a href="https://github.com/Qazzzie" target="_blank"><i class="fa-brands fa-github fa-spin" style="--fa-animation-duration: 4.5s;"></i></a>
+        </li>
       </ul>
 
-      <ul class="nav-list">
-        <li class="list-item"><a href="#" id="nav-about">About</a></li>
-        <li class="list-item"><a href="page/projects.html" id="nav-projects">Projects</a></li>
-        <li class="list-item"><a href="page/contact.html" id="nav-contact">Contact</a></li>
+      <ul class="site-nav">
+        <li class="site-list-item">
+          <a class="sitelink" href="index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="site-list-item">
+          <a class="sitelink" href="page/projects.html" id="nav-projects">Projects</a>
+        </li>
+        <li class="site-list-item">
+          <a class="sitelink" href="page/contact.html" id="nav-contact">Contact</a>
+        </li>
       </ul>
     </nav>
     </header>
 
     <div id="about" class="content">
-        <p1 id="header">Zach's Bio:</p1>
+        <p1 id="header">Zach Santangelo</p1>
+        <img src="/images/zachface.jpg" class="profile-pic fa-beat" style="--fa-animation-duration: 10s; --fa-beat-scale: 1.1;" alt="zach-profile-pic">
+        <p>Hello! I'm a passionate learner and find great joy in the process of software development. I enjoy thinking about creative approaches to problems in my spare time, and I feel inspired by complex challenges. I love implementing solutions with expressive code to produce an extensible product.</p>
       </div>
-        <div id="experience">
-          <p1 id="header">Experience</p1>
-        </div>
     </body>
 </html>
