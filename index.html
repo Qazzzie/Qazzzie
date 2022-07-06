@@ -30,6 +30,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     
+    <!-- boids -->
+    <script src="js/boids/spawnBoids.js"></script>
+    <script src="js/boids/boids.js"></script>
+
   </head>
 
   
@@ -65,8 +69,11 @@
 
     <div id="about" class="content">
         <p1 id="header">Zach Santangelo</p1>
-        <img src="/images/zachface.jpg" class="profile-pic fa-beat" style="--fa-animation-duration: 10s; --fa-beat-scale: 1.1;" alt="zach-profile-pic">
+        <img src="images/zachface.jpg" class="profile-pic fa-beat" style="--fa-animation-duration: 10s; --fa-beat-scale: 1.1;" alt="zach-profile-pic">
         <p>Hello! I'm a passionate learner and find great joy in the process of software development. I enjoy thinking about creative approaches to problems in my spare time, and I feel inspired by complex challenges. I love implementing solutions with expressive code to produce an extensible product.</p>
+      </div>
+      <div class="boids-canvas">
+        <canvas class="boids"></canvas>
       </div>
     </body>
 </html>
