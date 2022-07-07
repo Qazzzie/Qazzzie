@@ -270,7 +270,7 @@ li a:hover{
   width: 100%;
   display: grid;
   /* grid-template: 20em 20em 20em / 1fr 1fr 1fr; */
-  grid-template-columns: repeat(3, 25%) ;
+  grid-template-columns: repeat(3, 33.5%) ;
   grid-template-rows: auto;
   justify-content: center;
   align-items: center;
@@ -287,7 +287,7 @@ li a:hover{
   justify-content: center;
   /* padding: 6vh 3vw; */
   display: flex;
-  margin: 1vh 3vw;
+  margin: 1vh 1vw;
   /* size: 100px 200px; */
   height: 40vh;
   -webkit-border-radius: 5px;
