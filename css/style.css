@@ -295,6 +295,8 @@ li a:hover{
 	border-radius: 5px;
 	border: 1px solid #b3b3b5;
   padding: 5vh 2vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 @media (min-width: 414px) and (max-width: 767px) { 
   .projects-grid{
@@ -307,11 +309,6 @@ li a:hover{
     /* grid-template-rows: 1vh 1vw; */
   }
 }
-.project-grid-image{
-  display: block;
-  width: 100%;
-  height: auto;
-}
 .project-grid-image-overlay{
   position: absolute;
   bottom: 0;
@@ -323,10 +320,32 @@ li a:hover{
   height: 100%;
   transition: .5s ease;
 }
-.project-grid-image:hover .project-grid-image-overlay{
+.project-item:hover .project-grid-image-overlay{
   width: 100;
 }
-
+.project-grid-image-overlay{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* white-space: nowrap; */
+}
+.project-overlay-text{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
 /* 
 #plathymeImage{
   background: url("/images/PlaThyme.png");
@@ -338,3 +357,11 @@ li a:hover{
   background-repeat: no-repeat;
   background-size: auto;
 } */
+
+
+/* embedded yt videos */
+.ytembed{
+  margin: auto auto;
+  width: 50vw;
+  height: 40vh;
+}
