@@ -190,7 +190,7 @@ li a:hover{
 }
 .content{
   background-color: #31525B;
-  padding: 50px;
+  padding: 1vw;
   margin-bottom: 50px;
   border-radius: 50px;
   text-align: center;
@@ -277,7 +277,7 @@ li a:hover{
   justify-content: center;
   align-items: center;
   background-color: #31525B;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 50px;
   border-radius: 50px;
   text-align: center;
@@ -321,12 +321,11 @@ li a:hover{
   right: 0; 
   background-color: #008CBA;
   background-size: 100% 100%;
-
   overflow: hidden;
   width: 0%;
   height: 0%;
   /* translate: -100%; */
-  transform; ;
+  /* transform; ; */
   transition: .3s ease;
 }
 .project-item .project-grid-image-overlay{
@@ -353,28 +352,6 @@ li a:hover{
   text-align: center; */
   /* white-space: nowrap; */
 }
-.project-overlay-text{
-  /* color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center; */
-}
-/* 
-#plathymeImage{
-  background: url("/images/PlaThyme.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-#plathymeImage:hover{
-  background: url("/images/slapjack.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-} */
 
 
 /* embedded yt videos */
