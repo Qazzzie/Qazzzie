@@ -277,9 +277,8 @@ li a:hover{
   justify-content: center;
   align-items: center;
   background-color: #31525B;
-  padding: 5px;
   margin-bottom: 50px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   text-align: center;
   /* border: 3px solid #4880c9; */
 }
@@ -312,7 +311,8 @@ li a:hover{
     /* grid-template-rows: 1vh 1vw; */
   }
 }
-.project-grid-image-overlay{
+
+.project-item-image-overlay-grow{
   /* z-index: 3; */
   /* position: absolute; */
   top: 0;
@@ -328,11 +328,7 @@ li a:hover{
   /* transform; ; */
   transition: .3s ease;
 }
-.project-item .project-grid-image-overlay{
-    background-color: red;
-    z-index: 4;
-}
-.project-item:hover .project-grid-image-overlay{
+.project-item:hover .project-item-image-overlay-grow{
   /* transform: translate3d(0px, -150px, 0px); */
   background-color: red;
   /* translate: 0; */
@@ -340,19 +336,29 @@ li a:hover{
   height: 100%;
 }
 
-.project-grid-image-overlay{
-  /* color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center; */
-  /* white-space: nowrap; */
+.project-item-image-overlay-lrgrow{
+  /* z-index: 3; */
+  /* position: absolute; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  background-color: #008CBA;
+  background-size: 100% 100%;
+  overflow: hidden;
+  width: 0%;
+  height: 0%;
+  /* translate: -100%; */
+  /* transform; ; */
+  transition: .3s ease;
 }
-
+.project-item:hover .project-item-image-overlay-lrgrow{
+  /* transform: translate3d(0px, -150px, 0px); */
+  background-color: red;
+  /* translate: 0; */
+  width: 100%;
+  height: 100%;
+}
 
 /* embedded yt videos */
 .ytembed{
