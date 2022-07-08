@@ -184,7 +184,7 @@ li a:hover{
 #email{
   width: 100%;
 }
-#note{
+#message{
   width: 100%;
   height: 50px;
 }
@@ -213,18 +213,27 @@ li a:hover{
   }
 }
 
-.form-element{
-  margin-bottom: 50px;
+
+/* forms */
+.contact{
+  width: 50%;
+  margin: 0 auto;   /* center */ 
 }
-#mlImage{
-  background: url("/images/mlcode.png");
-  background-repeat: no-repeat;
-  background-size: auto;
+.form-label{
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1vh;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
 }
-#plantImage{
-  background: url("/images/showcase-65306_1920.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
+.form-input{
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  /* width: 50%; */
+  display: flex;
 }
 
 
