@@ -3,6 +3,9 @@
 // Ben Dowling - Oct 2008
 // www.coderholic.com
 
+
+// https://jumpoff.io/blog/implementing-boids-in-javascript-canvas
+
 var Boid = function(x, y, size) {
 	this.x = x;
 	this.y = y;

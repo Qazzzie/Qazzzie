@@ -15,7 +15,7 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="css/bootstrap.css" >
     <link rel="stylesheet" href="css/responsive.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     <!-- <link rel="stylesheet" href="css/camera.css"> -->
 
@@ -23,8 +23,8 @@
     <script src="https://kit.fontawesome.com/1d1249de16.js" crossorigin="anonymous"></script>
 
     <!-- Js Scripts -->
-    <script async src="js/loadinganimation.js"></script>
-    <script defer src="js/index.js"></script>
+    <script async src="../../js/loadinganimation.js"></script>
+    <script defer src="../../js/index.js"></script>
     
     <!-- jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -39,7 +39,6 @@
     <!-- loading animation -->
     <div class="se-pre-con"></div>
     <!-- nav -->
-    <header>
     <nav class="navigation">
       <ul class="social-nav">
         <li>
@@ -55,52 +54,59 @@
 
       <ul class="site-nav">
         <li class="site-list-item">
-          <a class="sitelink" href="index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
+          <a class="sitelink" href="../../index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
         </li>
         <li class="site-list-item">
-          <a class="sitelink" href="page/contact.html" id="nav-contact">Contact</a>
+          <a class="sitelink" href="../contact.html" id="nav-contact">Contact</a>
         </li>
+        <!-- <li class="site-list-item">
+          <a class="sitelink" href="#navtotop" id="nav-projects">Projects</a>
+        </li> -->
       </ul>
     </nav>
-    </header>
-
+    
     <div id="about" class="content">
-      <p1 id="header" style="color:#cc6d3d">Zach Santangelo</p1>
-      <img src="images/zachface.jpg" class="profile-pic fa-beat" style="--fa-animation-duration: 10s; --fa-beat-scale: 1.1;" alt="zach-profile-pic">
-      <p>Hello! I'm a passionate learner and find great joy in the process of software development. I enjoy thinking about creative approaches to problems in my spare time, and I feel inspired by complex challenges. I love implementing solutions with expressive code I am proud of to produce an extensible product that is pleasant for developers and users to interface. The endless possibilities motivate me to explore CS every day.</p>
+      <p1 class="header-text" style="color:#cc6d3d">Image Color Transferer</p1>
+      <p>This Python program takes two images and samples their color space after transforming them to L*a*b* color space which is linear, unlike RGB. This then allows the colors gradients from one image to be applied to another like a filter.</p>
     </div>
 
-    <div class="projects">
-      <div class="projects-grid">
-        <div class="project-item">
-          JamShare
-        </div>
-        <div class="project-item">
-          Deobfuscator
-        </div>
-        <div class="project-item">
-          PlaThyme
-        </div>
-        <div class="project-item">
-          Panorama Image Stitcher
-        </div>
-        <div class="project-item">
-          Frame Interpolator
-        </div>
-        <div class="project-item">
-          Image color transferer
-        </div>
-        <div class="project-item">
-          This website!
-        </div>
-      </div>
+    <a class="navtotop" id="navtotop" href="#top">Top ▶</a>
+
+    <div class="content">
+      <header>
+        Some results.
+      </header>
+      <p>Source, Target, Result</p>
+      <img src="../../images/ComputerVision/colorTransfer/source1.png" alt="source1">
+      <img src="../../images/ComputerVision/colorTransfer/target1.png" alt="target1">
+      <img src="../../images/ComputerVision/colorTransfer/result1.png" alt="target1">
+      <p>Source, Target, Result</p>
+      <img src="../../images/ComputerVision/colorTransfer/source2.png" alt="target1">
+      <img src="../../images/ComputerVision/colorTransfer/target2.png" alt="target1">
+      <img src="../../images/ComputerVision/colorTransfer/result2.png" alt="target1">
     </div>
 
+    <div class="content">
+      <p1>Method</p1>
+      
+      <p>To do this, the color spaces of the image must be seperated out and then multiplied by the matrix provided in this paper. This matrix is then used as a filter on the target image.</p>
+      <iframe src="../../images/ComputerVision/colorTransfer/Color transfer between images - Computer Graphics and Applications, IEEE - ColorTransfer.pdf" width="100%" height="20%"></iframe>
+    
+      <p>This image shows how L*a*b* color space is linear and flat, rather than having the hue being part of the gradient which can be seen as a part of the RGB color space.</p>
+      <img src="../../images/ComputerVision/colorTransfer/il_ie_LABColorSpace_withNbs.png" alt="labcolorspace">
+      <p>Image from: <a href="https://docs.esko.com/docs/en-us/packproof/16/userguide/home.html#en-us/common/pp/concept/co_pp_QuantifyingColors.html" class="textlink">https://docs.esko.com/docs/en-us/packproof/16/userguide/home.html#en-us/common/pp/concept/co_pp_QuantifyingColors.html</a></p>
+      
+      <p>RGB color space with hue as a part of it's nonlinear gradient:</p>
+      <img src="../../images/ComputerVision/colorTransfer/CIExy1931_AdobeRGB.png" alt="RGB color space" width="50%" height="30%">
+      <p>Image from: <a href="https://upload.wikimedia.org/wikipedia/commons/5/53/CIExy1931_AdobeRGB.png" class="textlink">https://upload.wikimedia.org/wikipedia/commons/5/53/CIExy1931_AdobeRGB.png</a></p>
+    
     </div>
+
+
       <!-- boids -->
       <div class="boids-canvas" id="boids" style="z-index:-1;">
         <canvas class="boids"></canvas>
       </div>
-
     </body>
+
 </html>

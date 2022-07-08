@@ -15,7 +15,7 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="css/bootstrap.css" >
     <link rel="stylesheet" href="css/responsive.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     <!-- <link rel="stylesheet" href="css/camera.css"> -->
 
@@ -23,8 +23,8 @@
     <script src="https://kit.fontawesome.com/1d1249de16.js" crossorigin="anonymous"></script>
 
     <!-- Js Scripts -->
-    <script async src="js/loadinganimation.js"></script>
-    <script defer src="js/index.js"></script>
+    <script async src="../../js/loadinganimation.js"></script>
+    <script defer src="../../js/index.js"></script>
     
     <!-- jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -39,7 +39,6 @@
     <!-- loading animation -->
     <div class="se-pre-con"></div>
     <!-- nav -->
-    <header>
     <nav class="navigation">
       <ul class="social-nav">
         <li>
@@ -55,45 +54,33 @@
 
       <ul class="site-nav">
         <li class="site-list-item">
-          <a class="sitelink" href="index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
+          <a class="sitelink" href="../../index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
         </li>
         <li class="site-list-item">
-          <a class="sitelink" href="page/contact.html" id="nav-contact">Contact</a>
+          <a class="sitelink" href="../contact.html" id="nav-contact">Contact</a>
         </li>
+        <!-- <li class="site-list-item">
+          <a class="sitelink" href="#navtotop" id="nav-projects">Projects</a>
+        </li> -->
       </ul>
     </nav>
-    </header>
-
+    
     <div id="about" class="content">
-      <p1 id="header" style="color:#cc6d3d">Zach Santangelo</p1>
-      <img src="images/zachface.jpg" class="profile-pic fa-beat" style="--fa-animation-duration: 10s; --fa-beat-scale: 1.1;" alt="zach-profile-pic">
-      <p>Hello! I'm a passionate learner and find great joy in the process of software development. I enjoy thinking about creative approaches to problems in my spare time, and I feel inspired by complex challenges. I love implementing solutions with expressive code I am proud of to produce an extensible product that is pleasant for developers and users to interface. The endless possibilities motivate me to explore CS every day.</p>
+      <p1 class="header-text" style="color:#cc6d3d">battlecode</p1>
+      <p><a href="http://play.battlecode.org/" class="textlink">Battlecode</a> is a yearly competeition that I participated in with 3 other SDE's to iteratively develop capture the flag style robot strategies against several other developing teams.</p>
     </div>
 
-    <div class="projects">
-      <div class="projects-grid">
-        <div class="project-item">
-          JamShare
-        </div>
-        <div class="project-item">
-          Deobfuscator
-        </div>
-        <div class="project-item">
-          PlaThyme
-        </div>
-        <div class="project-item">
-          Panorama Image Stitcher
-        </div>
-        <div class="project-item">
-          Frame Interpolator
-        </div>
-        <div class="project-item">
-          Image color transferer
-        </div>
-        <div class="project-item">
-          This website!
-        </div>
-      </div>
+    <a class="navtotop" id="navtotop" href="#top">Top ▶</a>
+
+    <div class="projects content" id="projects">
+      <header>
+        About BattleCode
+      </header>
+     <p>Team SaZaPraYi Github https://github.com/Qazzzie/454_battlecode</p>
+     <p>The programmable robots consisted of Muckrakers that could delete Slanderers, Slanderers that would increase political influence and eventually become politicians, Politiciants that could convert enemy Muckrakers into Slanderers using stored "conviction" and empower nearby units to produce more, and finally Engightenment Centers that spawn ally units which are the ultimate capture objective. </p>
+      <p>Sprint 1: We opted for a rush down tactic which proved effective early on, as other teams were developing more defensive or less thorought implementations initially. Elightenment Centers (EC's) were spawning mostly Muckrakers which was an early game tactic to overwhelm the enemies trying to save up Slanderers for late game resource usage.</p>
+    
+    
     </div>
 
     </div>
@@ -101,6 +88,6 @@
       <div class="boids-canvas" id="boids" style="z-index:-1;">
         <canvas class="boids"></canvas>
       </div>
-
     </body>
+
 </html>

@@ -15,7 +15,7 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="css/bootstrap.css" >
     <link rel="stylesheet" href="css/responsive.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     <!-- <link rel="stylesheet" href="css/camera.css"> -->
 
@@ -23,8 +23,8 @@
     <script src="https://kit.fontawesome.com/1d1249de16.js" crossorigin="anonymous"></script>
 
     <!-- Js Scripts -->
-    <script async src="js/loadinganimation.js"></script>
-    <script defer src="js/index.js"></script>
+    <script async src="../../js/loadinganimation.js"></script>
+    <script defer src="../../js/index.js"></script>
     
     <!-- jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -39,7 +39,6 @@
     <!-- loading animation -->
     <div class="se-pre-con"></div>
     <!-- nav -->
-    <header>
     <nav class="navigation">
       <ul class="social-nav">
         <li>
@@ -55,44 +54,31 @@
 
       <ul class="site-nav">
         <li class="site-list-item">
-          <a class="sitelink" href="index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
+          <a class="sitelink" href="../../index.html" id="nav-home"><i class="fa-solid fa-house"></i></a>
         </li>
         <li class="site-list-item">
-          <a class="sitelink" href="page/contact.html" id="nav-contact">Contact</a>
+          <a class="sitelink" href="../contact.html" id="nav-contact">Contact</a>
         </li>
+        <!-- <li class="site-list-item">
+          <a class="sitelink" href="#navtotop" id="nav-projects">Projects</a>
+        </li> -->
       </ul>
     </nav>
-    </header>
-
+    
     <div id="about" class="content">
-      <p1 id="header" style="color:#cc6d3d">Zach Santangelo</p1>
-      <img src="images/zachface.jpg" class="profile-pic fa-beat" style="--fa-animation-duration: 10s; --fa-beat-scale: 1.1;" alt="zach-profile-pic">
-      <p>Hello! I'm a passionate learner and find great joy in the process of software development. I enjoy thinking about creative approaches to problems in my spare time, and I feel inspired by complex challenges. I love implementing solutions with expressive code I am proud of to produce an extensible product that is pleasant for developers and users to interface. The endless possibilities motivate me to explore CS every day.</p>
+      <p1 class="header-text" style="color:#cc6d3d">PlaThyme</p1>
+      <p>This is a game hosting service/site that allows developers to easily add more multiplayer web based games using React and Socket.io with a mediator pattern for altering elements on each end user's DOM.</p>
     </div>
 
-    <div class="projects">
-      <div class="projects-grid">
-        <div class="project-item">
-          JamShare
-        </div>
-        <div class="project-item">
-          Deobfuscator
-        </div>
-        <div class="project-item">
-          PlaThyme
-        </div>
-        <div class="project-item">
-          Panorama Image Stitcher
-        </div>
-        <div class="project-item">
-          Frame Interpolator
-        </div>
-        <div class="project-item">
-          Image color transferer
-        </div>
-        <div class="project-item">
-          This website!
-        </div>
+    <a class="navtotop" id="navtotop" href="#top">Top ▶</a>
+
+    <div class="content" id="projects">
+      <header>
+        About PlaThyme
+      </header>
+      <div class="ytembed">
+        <iframe class="ytembed"src="https://www.youtube.com/embed/Rp-dLYJ4MPE">
+        </iframe>
       </div>
     </div>
 
@@ -101,6 +87,6 @@
       <div class="boids-canvas" id="boids" style="z-index:-1;">
         <canvas class="boids"></canvas>
       </div>
-
     </body>
+
 </html>
