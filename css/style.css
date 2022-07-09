@@ -222,7 +222,8 @@ li a:hover{
   height: 50px;
 }
 .content{
-  height: auto;
+  height:max-content;
+  overflow:scroll;
   background-color: #31525B;
   padding: 1vw;
   margin-bottom: 20px;
