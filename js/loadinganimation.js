@@ -58,14 +58,10 @@
         }
 
      }
- 
- 
- 
+
      addEventListener( 'pageshow', reorient );
      addEventListener( 'popstate', reorient ); // Travel in same page
- 
- 
- 
+  
  }());
 
 //  must happen after checking direction of navigation, otherwise animation stays permenent
