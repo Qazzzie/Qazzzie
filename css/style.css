@@ -431,3 +431,25 @@ li a:hover{
   visibility: visible;
   z-index: 5;
 }
+
+/* code snippets */
+.code{
+  /* width: 90%; */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.leethard{
+  border-color: red;
+  border-style: groove;
+}
+
+.leetmedium{
+  border-color: yellow;
+  border-style: groove;
+}
+
+.leeteasy{
+  border-color: green;
+  border-style: groove;
+}

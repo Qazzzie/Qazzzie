@@ -31,8 +31,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     
     <!-- boids -->
-    <script src="js/boids/spawnBoids.js"></script>
-    <script src="js/boids/boids.js"></script>
+    <script src="../../js/boids/spawnBoids.js"></script>
+    <script src="../../js/boids/boids.js"></script>
+
+    <!-- Code formatting -->
+    <link rel="stylesheet" href="../../css/prism.css">
+    <script src="../../js/prism.js"></script>
   </head>
 
   <body class="body">
@@ -72,7 +76,278 @@
 
     <a class="navtotop" id="navtotop" href="#top">Top ▶</a>
 
-    
+
+    <div class="content">
+      <p1 class="header-text" style="color:#cc6d3d">Solutions</p1>
+      
+      <p><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" class="textlink">Max Path Sum of Binary Tree (Hard)</a></p>
+      <pre class="code leethard"><code class="language-python"> 
+        # Zach Santangelo
+        # https://leetcode.com/problems/binary-tree-maximum-path-sum/
+        # Definition for a binary tree node.
+        # class TreeNode:
+        #     def __init__(self, val=0, left=None, right=None):
+        #         self.val = val
+        #         self.left = left
+        #         self.right = right
+        class Solution:    
+            def __init__(self):
+                self.Tmax = -999999 #max path for the whole tree
+                
+            def maxPathSum(self, root: Optional[TreeNode]) -> int:    
+                #combination of lowest common ancestor only we want to find the max val path        
+                if(root==None): return root
+        
+                def childSum(self,root): #returns the sum of max child path plus itself            
+                    if(root==None):
+                        return None
+                    
+                    leftsum = childSum(self,root.left)
+                    rightsum = childSum(self,root.right)
+                    maxChildSum = -9999999#val to return after checking current path mag
+                    pathsum = -999999
+        
+                    if(leftsum!=None and rightsum!=None):
+                        pathsum = leftsum + rightsum + root.val#current node's max path
+                        maxChildSum=max(leftsum,rightsum) #choose largest 
+                        
+                    elif(leftsum == None and rightsum != None):
+                        maxChildSum = rightsum
+                        pathsum = maxChildSum+root.val
+                        
+                    elif(leftsum != None and rightsum == None):
+                        maxChildSum = leftsum
+                        pathsum = maxChildSum+root.val
+                        
+                    else: 
+                        maxChildSum = 0#dont add or subtract
+                        pathsum = root.val
+                    print(maxChildSum, root.val)
+        
+                    if(pathsum > self.Tmax):
+                        self.Tmax = pathsum
+                        
+                    return maxChildSum + root.val #give parent max single path
+                
+                childSum(self,root)
+                return self.Tmax
+      </code></pre>
+
+
+      <p><a href="https://leetcode.com/problems/group-anagrams/" class="textlink">Group Anagrams (Medium)</a></p>
+      <pre class="code leetmedium"><code class="language-python"> 
+        # Zach Santangelo
+        # https://leetcode.com/problems/group-anagrams/
+        
+        class Solution(object):
+            def groupAnagrams(self, strs):
+                """
+                :type strs: List[str]
+                :rtype: List[List[str]]
+                """
+                #list of dictionaries of letters 
+                dicts = {}
+        
+                for word in strs:# for each word            
+                    alphaWord = ''.join(sorted(word)) #sort the word alphabetically
+                    print(alphaWord)
+                    if(dicts.get(alphaWord)!=None):
+                        dicts[alphaWord].append(word)#append the anagram to alphaWord Key
+                    else:
+                        dicts.update({alphaWord:[word]})
+              
+                print(dicts)
+                
+                ret = []
+                reti=0
+                for key, value in dicts.items():
+                    ret.append([])#add a new sublist
+        
+                    for word in value:#add values from key to sublist
+                        ret[reti].append(word)
+                    
+                    reti=reti+1 #increment to next sublist
+                        
+                return ret
+      </code></pre>
+      
+      <p><a href="https://leetcode.com/problems/valid-parentheses/" class="textlink">Valid Parenthesis (Easy)</a></p>
+      <pre class="code leeteasy"><code class="language-python"> 
+        # Zach Santangelo
+        # https://leetcode.com/problems/valid-parentheses/
+        class Solution(object):
+            def isValid(self, s):
+                """
+                :type s: str
+                :rtype: bool
+                """
+                roundbrace = 0
+                curlybrace = 0
+                squarebrace = 0
+                for brace in s:
+                    #adding if we are opening braces
+                    if(brace == "("):
+                        roundbrace = roundbrace + 1
+                    
+                    if(brace == "["):
+                        squarebrace = squarebrace + 1
+                    
+                    if(brace == "{"):
+                        curlybrace = curlybrace + 1
+                    
+                    #if there are other kinds of open braces yet to be closed, fails.
+                    if(brace == ")"):
+                        if(squarebrace!=0 and curlybrace!=0):
+                            return False
+                        else: roundbrace = roundbrace - 1
+                     
+                    if(brace == "]"):
+                        if(roundbrace!=0 and curlybrace!=0):
+                            return False
+                        else: squarebrace = squarebrace - 1
+                        
+                    if(brace == "}"):
+                        if(squarebrace!=0 and roundbrace!=0):
+                            return False
+                        else: curlybrace = curlybrace - 1
+                
+                #if no failures, return true
+                return True
+      </code></pre>
+
+
+      <p><a href="https://leetcode.com/problems/flood-fill" class="textlink">Flood Fill (Easy Graph)</a></p>
+      <pre class="code leeteasy"><code class="language-python"> 
+        #Zach Santangelo
+        #https://leetcode.com/problems/flood-fill/
+        class Solution:
+            def solve(self, row, col, image, visited, n, m, color, oldColor):
+                
+                # Base Case
+                if (row < 0 or row >= n or col < 0 or col >= m or image[row][col] != oldColor or (row,col) in visited):
+                    return False;
+                
+                image[row][col]=color
+                #visited[row][col] = True;
+                visited.add((row, col))
+                    
+                #depth first, finds explores all avs before returning to numIslands for it to check next possible set of ij routes
+                    
+                #Move Top
+                top = self.solve(row - 1, col, image, visited, n, m, color, oldColor)
+                
+                #Move Right
+                right = self.solve (row, col + 1, image, visited, n, m, color, oldColor)
+                
+                #Move Down
+                down = self.solve(row + 1, col, image, visited, n, m, color, oldColor)
+                
+                #Move Left
+                left = self.solve(row, col - 1, image, visited, n, m, color, oldColor)
+                
+                if(not top and not right and not down and not left):
+                    return True
+            
+            def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+                
+                n = len(image)
+                m = len(image[0])
+                oldColor = image[sr][sc]
+                
+                visited = set()
+         
+                if(self.solve(sr, sc, image, visited, n, m, color, oldColor)):#depth first
+                    return image 
+      </code></pre>
+
+      <p><a href="https://leetcode.com/problems/ransom-note/" class="textlink">Ransom Note (Easy)</a></p>
+      <pre class="code leeteasy"><code class="language-python"> 
+        #Zach Santangelo
+        #https://leetcode.com/problems/flood-fill/
+        class Solution:
+            def solve(self, row, col, image, visited, n, m, color, oldColor):
+                
+                # Base Case
+                if (row < 0 or row >= n or col < 0 or col >= m or image[row][col] != oldColor or (row,col) in visited):
+                    return False;
+                
+                image[row][col]=color
+                #visited[row][col] = True;
+                visited.add((row, col))
+                    
+                #depth first, finds explores all avs before returning to numIslands for it to check next possible set of ij routes
+                    
+                #Move Top
+                top = self.solve(row - 1, col, image, visited, n, m, color, oldColor)
+                
+                #Move Right
+                right = self.solve (row, col + 1, image, visited, n, m, color, oldColor)
+                
+                #Move Down
+                down = self.solve(row + 1, col, image, visited, n, m, color, oldColor)
+                
+                #Move Left
+                left = self.solve(row, col - 1, image, visited, n, m, color, oldColor)
+                
+                if(not top and not right and not down and not left):
+                    return True
+            
+            def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+                
+                n = len(image)
+                m = len(image[0])
+                oldColor = image[sr][sc]
+                
+                visited = set()
+         
+                if(self.solve(sr, sc, image, visited, n, m, color, oldColor)):#depth first
+                    return image 
+      </code></pre>
+
+      <p><a href="https://leetcode.com/problems/valid-anagram/" class="textlink">Valid Anagrams (Easy)</a></p>
+      <pre class="code leeteasy"><code class="language-python"> 
+        #Zach Santangelo
+        #https://leetcode.com/problems/flood-fill/
+        class Solution:
+            def solve(self, row, col, image, visited, n, m, color, oldColor):
+                
+                # Base Case
+                if (row < 0 or row >= n or col < 0 or col >= m or image[row][col] != oldColor or (row,col) in visited):
+                    return False;
+                
+                image[row][col]=color
+                #visited[row][col] = True;
+                visited.add((row, col))
+                    
+                #depth first, finds explores all avs before returning to numIslands for it to check next possible set of ij routes
+                    
+                #Move Top
+                top = self.solve(row - 1, col, image, visited, n, m, color, oldColor)
+                
+                #Move Right
+                right = self.solve (row, col + 1, image, visited, n, m, color, oldColor)
+                
+                #Move Down
+                down = self.solve(row + 1, col, image, visited, n, m, color, oldColor)
+                
+                #Move Left
+                left = self.solve(row, col - 1, image, visited, n, m, color, oldColor)
+                
+                if(not top and not right and not down and not left):
+                    return True
+            
+            def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+                
+                n = len(image)
+                m = len(image[0])
+                oldColor = image[sr][sc]
+                
+                visited = set()
+         
+                if(self.solve(sr, sc, image, visited, n, m, color, oldColor)):#depth first
+                    return image 
+      </code></pre>
+    </div>
 
     </div>
       <!-- boids -->
